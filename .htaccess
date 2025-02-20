@@ -1,0 +1,45 @@
+# Enable URL rewriting
+RewriteEngine On
+RewriteBase /
+
+# Remove trailing slashes
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# Rewrite URLs to their respective pages
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^about$ about.html [L]
+RewriteRule ^gallery$ gallery.html [L]
+RewriteRule ^timeline$ timeline.html [L]
+RewriteRule ^sources$ sources.html [L]
+RewriteRule ^contact$ contact.html [L]
+RewriteRule ^blog/([^/]+)$ blog.php?slug=$1 [L]
+RewriteRule ^artwork/([^/]+)$ artwork.php?slug=$1 [L]
+
+# Custom 404 page
+ErrorDocument 404 /404.html
+
+# Handle API requests
+RewriteCond %{REQUEST_URI} ^/api/
+RewriteRule ^api/(.*)$ http://localhost:3000/api/$1 [P,L]
+
+# Enable CORS
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+Header set Access-Control-Allow-Headers "Content-Type"
+
+# Handle OPTIONS requests
+RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule ^(.*)$ $1 [R=200,L]
+
+# Handle all other requests
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.html [L]
+
+# Prevent direct access to .env
+<Files .env>
+    Order allow,deny
+    Deny from all
+</Files> 

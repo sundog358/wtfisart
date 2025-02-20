@@ -1,0 +1,69 @@
+# 💡 Essential Files to Ignore
+
+# 🚫 Node.js & npm dependencies (if using)
+node_modules/
+package-lock.json
+npm-debug.log*
+yarn.lock
+
+# 🚫 Logs & Temp Files
+*.log
+*.tmp
+*.cache
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+
+# 🚫 Compiled Files & Dependencies (if using build tools)
+dist/
+build/
+out/
+coverage/
+.vscode/
+.idea/
+*.iml
+
+# 🚫 Environment & Secrets (Protect API Keys, SMTP credentials, etc.)
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# 🚫 Email Contact Form Files (Avoid Storing Sensitive Data)
+config.php
+mail-config.json
+smtp-credentials.json
+server/private-key.pem
+server/cert.pem
+
+# 🚫 Static Assets (Unoptimized & Cache Files)
+*.psd
+*.ai
+*.sketch
+*.xcf
+*.tiff
+*.zip
+*.rar
+*.tar.gz
+
+# 🚫 IDE & Editor Files
+*.sublime-project
+*.sublime-workspace
+*.vscode/
+*.idea/
+*.eslintrc.js
+*.prettierrc
+
+# 🚫 Sass/CSS Preprocessing (if using)
+.sass-cache/
+*.map
+
+# 🚫 Other Misc Files
+*.bak
+*.swp
+*.pid
+*.seed
+*.lock
+*.sqlite

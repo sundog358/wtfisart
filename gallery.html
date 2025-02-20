@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - WTF is Art</title>
+    <link rel="icon" type="image/x-icon" href="/images/8sprocket.ico" />
+    <meta
+      name="description"
+      content="Explore our curated collection of digital artworks pushing the boundaries of creativity and technology."
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <!-- SEO Meta Tags -->
+    <meta property="og:title" content="Digital Art Gallery - WTF is Art" />
+    <meta
+      property="og:description"
+      content="Explore our curated collection of digital artworks pushing the boundaries of creativity and technology."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://wtfisart.com/gallery" />
+    <link rel="canonical" href="https://wtfisart.com/gallery" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-brand">
+        <img
+          src="/images/whitelogo.png"
+          alt="WTF is Art Logo"
+          class="nav-logo"
+        />
+        <span class="gradient-text">WTF is Art</span>
+      </div>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/timeline">Timeline</a>
+        <a href="/sources">Sources</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </nav>
+
+    <section class="gallery">
+      <div class="gallery-header">
+        <h1>Digital Art Gallery</h1>
+      </div>
+
+      <div class="gallery-grid">
+        <article class="artwork-card">
+          <div class="artwork-image">
+            <img
+              src="/images/Photo_2025-02-19_232406.jpg"
+              alt="Early Metaconceptual Art Development - 2006"
+            />
+          </div>
+          <div class="artwork-info">
+            <h3>Formative years of Metaconceptual Art</h3>
+            <p>
+              Sun & Rain Works was founded in 2005, and in the early years, we
+              made and sold hand made tie dye and batik hand painted t shirts as
+              pictured here in 2006 at the Eugene Saturday Market in Oregon.
+            </p>
+            <span class="artwork-tag">September 9, 2006</span>
+            <div class="artwork-actions">
+              <button class="view-btn">View Details</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="artwork-card">
+          <div class="artwork-image">
+            <img
+              src="/images/DSCF0014.JPG"
+              alt="Digital Art Innovation - August 2008"
+            />
+          </div>
+          <div class="artwork-info">
+            <h3>Digital Art Innovation</h3>
+            <p>
+              Exploring new frontiers in digital art creation and expression
+            </p>
+            <span class="artwork-tag">August 8, 2008</span>
+            <div class="artwork-actions">
+              <button class="view-btn">View Details</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="artwork-card">
+          <div class="artwork-image">
+            <img
+              src="/images/DSCF0020.JPG"
+              alt="Digital Art Composition - August 2008"
+            />
+          </div>
+          <div class="artwork-info">
+            <h3>Digital Art Composition</h3>
+            <p>Experimental digital composition exploring form and texture</p>
+            <span class="artwork-tag">August 8, 2008</span>
+            <div class="artwork-actions">
+              <button class="view-btn">View Details</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="artwork-card">
+          <div class="artwork-image">
+            <img
+              src="/images/DSCF0013.JPG"
+              alt="Early Digital Art Exploration - August 2008"
+            />
+          </div>
+          <div class="artwork-info">
+            <h3>Early Digital Art Exploration</h3>
+            <p>
+              Digital art experimentation and development at Sun & Rain Works
+            </p>
+            <span class="artwork-tag">August 8, 2008</span>
+            <div class="artwork-actions">
+              <button class="view-btn">View Details</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Artwork Modal -->
+      <div class="artwork-modal" id="artworkModal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <div class="modal-image">
+            <img src="" alt="" id="modalImage" />
+          </div>
+          <div class="modal-info">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            <div class="modal-details">
+              <p><strong>Artist:</strong> <span id="modalArtist"></span></p>
+              <p><strong>Year:</strong> <span id="modalYear"></span></p>
+              <p><strong>Medium:</strong> <span id="modalMedium"></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content-wrapper">
+        <div class="footer-section">
+          <h4>Navigation</h4>
+          <nav class="footer-nav">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/timeline">Timeline</a>
+            <a href="/sources">Sources</a>
+            <a href="/contact">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-section">
+          <h4>About Us</h4>
+          <nav class="footer-nav">
+            <a href="/about#history">Our History</a>
+            <a href="/about#mission">Our Mission</a>
+            <a href="/about#vision">Our Vision</a>
+            <a href="/about#team">Our Team</a>
+          </nav>
+        </div>
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <nav class="footer-nav">
+            <a href="/gallery">Art Gallery</a>
+            <a href="/timeline">Art Timeline</a>
+            <a href="/sources">Documentation</a>
+            <a href="/contact">Get in Touch</a>
+          </nav>
+        </div>
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <nav class="footer-nav">
+            <a href="mailto:info@wtfisart.com">Email Us</a>
+            <a href="/contact#form">Contact Form</a>
+            <a href="/about#location">Location</a>
+            <a href="/about#hours">Hours</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-content">
+        <p>&copy; 2025 Sun & Rain Works. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="js/gallery.js"></script>
+  </body>
+</html>

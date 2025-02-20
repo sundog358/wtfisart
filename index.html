@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WTF is Art - Digital Experience</title>
+    <link rel="icon" type="image/x-icon" href="/images/8sprocket.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-brand">
+        <span class="gradient-text">WTF is Art</span>
+      </div>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/timeline">Timeline</a>
+        <a href="/sources">Sources</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </nav>
+
+    <section id="home" class="hero">
+      <div class="globe-container">
+        <canvas id="digitalGlobe"></canvas>
+      </div>
+      <div class="hero-content">
+        <h1>WTF is Art?</h1>
+        <p>Exploring the frontiers of art and technology in the digital age.</p>
+        <button class="more-info-btn">More Info</button>
+      </div>
+
+      <div class="info-modal" id="infoModal">
+        <div class="info-modal-content">
+          <span class="close-info-modal">&times;</span>
+          <p>
+            This website was originally created by the art business Sun & Rain
+            Works in the year 2008 as a Metaconceptual or Meta art work, and in
+            spring of 2009 would be the first live art work ever created at
+            auction at Sotheby's New York City, as a live real time website and
+            also digital bytes and bits of data and electrical pulses and
+            currents flowing through the interwebs on the planet Earth.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content-wrapper">
+        <div class="footer-section">
+          <h4>Navigation</h4>
+          <nav class="footer-nav">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/timeline">Timeline</a>
+            <a href="/sources">Sources</a>
+            <a href="/contact">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-section">
+          <h4>About Us</h4>
+          <nav class="footer-nav">
+            <a href="/about#history">Our History</a>
+            <a href="/about#mission">Our Mission</a>
+            <a href="/about#vision">Our Vision</a>
+            <a href="/about#team">Our Team</a>
+          </nav>
+        </div>
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <nav class="footer-nav">
+            <a href="/gallery">Art Gallery</a>
+            <a href="/timeline">Art Timeline</a>
+            <a href="/sources">Documentation</a>
+            <a href="/contact">Get in Touch</a>
+          </nav>
+        </div>
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <nav class="footer-nav">
+            <a href="mailto:info@wtfisart.com">Email Us</a>
+            <a href="/contact#form">Contact Form</a>
+            <a href="/about#location">Location</a>
+            <a href="/about#hours">Hours</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-content">
+        <p>&copy; 2025 Sun & Rain Works. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.querySelector(".more-info-btn").addEventListener("click", () => {
+        document.getElementById("infoModal").style.display = "block";
+        document.body.style.overflow = "hidden";
+      });
+
+      document
+        .querySelector(".close-info-modal")
+        .addEventListener("click", () => {
+          document.getElementById("infoModal").style.display = "none";
+          document.body.style.overflow = "auto";
+        });
+
+      document.getElementById("infoModal").addEventListener("click", (e) => {
+        if (e.target === document.getElementById("infoModal")) {
+          document.getElementById("infoModal").style.display = "none";
+          document.body.style.overflow = "auto";
+        }
+      });
+    </script>
+    <script src="globe.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
